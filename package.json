@@ -1,0 +1,24 @@
+{
+  "name": "iammenasco-blue",
+  "version": "0.0.1",
+  "description": "Adds iammenasco-blue as a varable for your styles!",
+  "main": "css/iammenasco-blue.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iammenasco/iammenasco-blue.git"
+  },
+  "keywords": [
+    "iammenasco",
+    "#368dda",
+    "blue"
+  ],
+  "author": "Brian Menasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iammenasco/iammenasco-blue/issues"
+  },
+  "homepage": "https://github.com/iammenasco/iammenasco-blue#readme"
+}
