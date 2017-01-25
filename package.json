@@ -1,6 +1,6 @@
 {
   "name": "iammenasco-blue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Adds iammenasco-blue as a varable for your styles!",
   "main": "css/iammenasco-blue.css",
   "scripts": {
