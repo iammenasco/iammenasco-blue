@@ -1,0 +1,20 @@
+{
+  "name": "iammenasco-blue",
+  "description": "Adds iammenasco-blue as a varable for your styles!",
+  "main": "css/iammenasco-blue.css",
+  "authors": [
+    "Brian Menasco"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "iammenasco",
+    "#368dda",
+    "blue"
+  ],
+  "homepage": "https://github.com/iammenasco/iammenasco-blue",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "haters",
+  ]
+}
