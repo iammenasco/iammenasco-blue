@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "at-rule-semicolon-newline-after": "always",
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "color-named": "always-where-possible",
+    "color-no-invalid-hex": true,
+    "indentation": 2,
+    "no-extra-semicolons": true,
+    "no-indistinguishable-colors": true
+  }
+}

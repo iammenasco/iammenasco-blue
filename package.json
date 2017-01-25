@@ -4,7 +4,7 @@
   "description": "Adds iammenasco-blue as a varable for your styles!",
   "main": "css/iammenasco-blue.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "stylelint \"**/iammenasco-blue.*\""
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/iammenasco/iammenasco-blue/issues"
   },
-  "homepage": "https://github.com/iammenasco/iammenasco-blue#readme"
+  "homepage": "https://github.com/iammenasco/iammenasco-blue#readme",
+  "dependencies": {
+    "stylelint": "*"
+  }
 }
