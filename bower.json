@@ -2,6 +2,7 @@
   "name": "iammenasco-blue",
   "description": "Adds iammenasco-blue as a varable for your styles!",
   "main": "css/iammenasco-blue.css",
+  "version": "0.0.3",
   "authors": [
     "Brian Menasco"
   ],
