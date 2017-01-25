@@ -1,4 +1,5 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
+[![Code Climate](https://codeclimate.com/github/iammenasco/iammenasco-blue/badges/gpa.svg)](https://codeclimate.com/github/iammenasco/iammenasco-blue)
 
 ### What is `iammenasco-blue`?
 This [amazing color](http://www.color-hex.com/color/368dda) is the blue I use for most of my projects.
