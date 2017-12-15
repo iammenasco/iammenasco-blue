@@ -6,7 +6,6 @@
     "color-named": "always-where-possible",
     "color-no-invalid-hex": true,
     "indentation": 2,
-    "no-extra-semicolons": true,
-    "no-indistinguishable-colors": true
+    "no-extra-semicolons": true
   }
 }
