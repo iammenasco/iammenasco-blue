@@ -4,7 +4,9 @@
   "description": "Adds iammenasco-blue as a varable for your styles!",
   "main": "css/iammenasco-blue.css",
   "scripts": {
-    "test": "stylelint \"**/iammenasco-blue.*\""
+    "test": "stylelint \"**/iammenasco-blue.*\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/iammenasco/iammenasco-blue#readme",
   "dependencies": {
-    "stylelint": "*"
-  }
+    "stylelint": "*",
+    "snyk": "^1.69.10"
+  },
+  "snyk": true
 }
