@@ -7,7 +7,7 @@
 
 
 ### What is `iammenasco-blue`?
-This [amazing color](http://www.color-hex.com/color/368dda) is the blue I use for most of my projects.
+#368dda - This [amazing color](http://www.color-hex.com/color/368dda) is the blue I use for most of my projects.
 
 ### Why use `iammenasco-blue`?
 The color looks great on light or dark backgrounds, and is quite useful on many elements as well.
