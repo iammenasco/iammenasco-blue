@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:braces:20180219':
@@ -13,3 +13,24 @@ patch:
         patched: '2019-07-10T07:44:51.228Z'
     - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-10T07:44:51.228Z'
+  SNYK-JS-LODASH-567746:
+    - stylelint > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > postcss-reporter > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > table > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
+    - stylelint > @stylelint/postcss-css-in-js > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-06T07:45:05.734Z'
