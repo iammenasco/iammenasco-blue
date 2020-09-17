@@ -1,0 +1,20 @@
+pull_request_rules:
+  - name: Merge Sync
+    conditions:
+      - author:snyk-bot
+      - status-success=codeclimate
+      - status-success=deploy/netlify
+      - status-success=security/snyk (iammenasco)
+    actions:
+      merge:
+        method: merge
+        
+  - name: Merge Dependabot
+    conditions:
+      - author~=^dependabot(|-preview)\[bot\]$
+      - status-success=codeclimate
+      - status-success=deploy/netlify
+      - status-success=security/snyk (iammenasco)
+    actions:
+      merge:
+        method: merge
