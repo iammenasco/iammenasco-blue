@@ -1,6 +1,4 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
-[![Code Climate](https://codeclimate.com/github/iammenasco/iammenasco-blue/badges/gpa.svg)](https://codeclimate.com/github/iammenasco/iammenasco-blue)
-[![Build Status](https://travis-ci.org/iammenasco/iammenasco-blue.svg?branch=master)](https://travis-ci.org/iammenasco/iammenasco-blue)
 [![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/iammenasco-blue/badge.svg)](https://snyk.io/test/github/iammenasco/iammenasco-blue)
 [![npm version](https://badge.fury.io/js/iammenasco-blue.svg)](https://badge.fury.io/js/iammenasco-blue)
 [![Bower version](https://badge.fury.io/bo/iammenasco-blue.svg)](https://badge.fury.io/bo/iammenasco-blue)
