@@ -7,8 +7,8 @@ pull_request_rules:
       - status-success=security/snyk (iammenasco)
     actions:
       merge:
-        method: merge
         bot_account: iammenasco
+        method: merge
         
   - name: Merge Dependabot
     conditions:
@@ -18,5 +18,5 @@ pull_request_rules:
       - status-success=security/snyk (iammenasco)
     actions:
       merge:
-        method: merge
         bot_account: iammenasco
+        method: merge
