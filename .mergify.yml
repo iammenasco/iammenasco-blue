@@ -8,6 +8,7 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        bot_account: iammenasco
         
   - name: Merge Dependabot
     conditions:
@@ -18,3 +19,4 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        bot_account: iammenasco
