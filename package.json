@@ -25,7 +25,7 @@
   "homepage": "https://github.com/iammenasco/iammenasco-blue#readme",
   "dependencies": {
     "stylelint": "*",
-    "snyk": "^1.410.2"
+    "snyk": "^1.432.0"
   },
   "snyk": true
 }
