@@ -1,4 +1,5 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/8js6.svg)](https://betteruptime.com/?utm_source=status_badge)
 [![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/iammenasco-blue/badge.svg)](https://snyk.io/test/github/iammenasco/iammenasco-blue)
 [![npm version](https://badge.fury.io/js/iammenasco-blue.svg)](https://badge.fury.io/js/iammenasco-blue)
 [![Bower version](https://badge.fury.io/bo/iammenasco-blue.svg)](https://badge.fury.io/bo/iammenasco-blue)
