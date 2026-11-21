@@ -1,6 +1,7 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
 
 [![npm version](https://img.shields.io/npm/v/iammenasco-blue?color=368dda)](https://www.npmjs.com/package/iammenasco-blue)
+[![PyPI version](https://img.shields.io/pypi/v/iammenasco-blue?color=368dda)](https://pypi.org/project/iammenasco-blue/)
 [![GitHub release](https://img.shields.io/github/v/release/iammenasco/iammenasco-blue?color=368dda)](https://github.com/iammenasco/iammenasco-blue/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-368dda)](LICENSE)
 
@@ -98,10 +99,8 @@ Provides `bg-iammenasco-blue`, `text-iammenasco-blue`, `iammenasco-blue-50` thro
 
 ### 5. Python & Terminal ANSI
 
-Install directly from GitHub:
-
 ```sh
-pip install "git+https://github.com/iammenasco/iammenasco-blue.git"
+pip install iammenasco-blue
 ```
 
 ```python
