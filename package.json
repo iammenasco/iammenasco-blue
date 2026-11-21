@@ -36,8 +36,7 @@
     "test": "stylelint \"**/iammenasco-blue.*\"",
     "verify": "node --test test/verify.mjs",
     "swatches": "python3 build_swatches.py",
-    "snyk-protect": "snyk protect",
-    "prepublishOnly": "npm run verify && npm run snyk-protect"
+    "prepublishOnly": "npm run verify"
   },
   "repository": {
     "type": "git",
@@ -58,9 +57,7 @@
     "url": "https://github.com/iammenasco/iammenasco-blue/issues"
   },
   "homepage": "https://github.com/iammenasco/iammenasco-blue#readme",
-  "dependencies": {
-    "stylelint": "*",
-    "snyk": "^1.432.0"
-  },
-  "snyk": true
+  "devDependencies": {
+    "stylelint": "*"
+  }
 }
