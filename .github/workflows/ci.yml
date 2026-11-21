@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run JS and Python tests
+        run: npm test
+      - name: Smoke test Node and Python CLIs
+        run: |
+          node bin/cli.js
+          python3 -m iammenasco_blue
+      - name: Verify generated swatches match tokens.json
+        run: |
+          python3 build_swatches.py
+          git diff --exit-code swatches/
+      - name: Verify Python package build
+        run: |
+          python3 -m pip install --upgrade build
+          python3 -m build
