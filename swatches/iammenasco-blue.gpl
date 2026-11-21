@@ -1,0 +1,16 @@
+GIMP Palette
+Name: iammenasco-blue
+Columns: 4
+# Canonical #368dda and OKLCH-derived 50-950 scale
+ 54 141 218	iammenasco-blue (#368dda)
+235 245 255	iammenasco-blue-50 (#ebf5ff)
+212 233 254	iammenasco-blue-100 (#d4e9fe)
+173 212 251	iammenasco-blue-200 (#add4fb)
+129 187 244	iammenasco-blue-300 (#81bbf4)
+ 88 162 233	iammenasco-blue-400 (#58a2e9)
+ 54 141 218	iammenasco-blue-500 (#368dda)
+ 27 116 188	iammenasco-blue-600 (#1b74bc)
+ 10  91 152	iammenasco-blue-700 (#0a5b98)
+  9  68 116	iammenasco-blue-800 (#094474)
+ 11  50  84	iammenasco-blue-900 (#0b3254)
+  6  30  52	iammenasco-blue-950 (#061e34)

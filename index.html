@@ -1,15 +1,875 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>I am Menasco Blue</title>
-  <link rel="stylesheet prefetch" href="css/iammenasco-blue.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iammenasco-blue (#368dda) — Canonical Color Specimen</title>
+  <meta name="description" content="Official design system specification, WCAG 2.1 contrast matrix, tonal scale, and registry certificate for iammenasco-blue (#368dda).">
+  <meta name="theme-color" content="#368dda">
+  <link rel="stylesheet" href="css/iammenasco-blue.min.css">
   <style>
+    :root {
+      --color-iammenasco-blue: #368dda;
+      --bg: #0b111a;
+      --surface: #111927;
+      --surface-2: #162235;
+      --border: rgba(148, 184, 224, 0.16);
+      --text: #eef4fc;
+      --muted: #9bb1cb;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: var(--color-iammenasco-blue);
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #81bbf4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #368dda 0%, #1b74bc 55%, #0a5b98 100%);
+      color: #ffffff;
+      padding: 4rem 1.5rem 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(6, 30, 52, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      align-items: end;
+      margin-top: 1.25rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-sub {
+      margin: 0.9rem 0 0;
+      font-size: 1.08rem;
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 54ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1rem;
+      border-radius: 0.55rem;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(6, 30, 52, 0.42);
+      color: #ffffff;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: transform 0.12s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      background: rgba(6, 30, 52, 0.68);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #061e34;
+      border-color: rgba(255, 255, 255, 0.45);
+      font-weight: 600;
+    }
+
+    .hero-card {
+      background: rgba(6, 30, 52, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 0.9rem;
+      padding: 1.25rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .swatch-preview {
+      height: 84px;
+      border-radius: 0.6rem;
+      background: var(--color-iammenasco-blue);
+      border: 2px solid rgba(255, 255, 255, 0.65);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0.6rem 0.8rem;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .kv-mini {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .kv-mini div span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    main {
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    section:first-child {
+      margin-top: 0;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .copy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .copy-card {
+      text-align: left;
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.9rem 1rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .copy-card:hover {
+      border-color: var(--color-iammenasco-blue);
+      background: var(--surface-2);
+    }
+
+    .copy-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .copy-value {
+      margin-top: 0.35rem;
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      word-break: break-all;
+      color: #ffffff;
+    }
+
+    .copy-hint {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: #81bbf4;
+    }
+
+    .scale-strip {
+      display: grid;
+      grid-template-columns: repeat(11, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+
+    .scale-chip {
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      overflow: hidden;
+      background: var(--surface);
+      cursor: pointer;
+      padding: 0;
+      color: inherit;
+      text-align: left;
+      transition: transform 0.12s ease, border-color 0.15s ease;
+    }
+
+    .scale-chip:hover {
+      transform: translateY(-2px);
+      border-color: #ffffff;
+    }
+
+    .scale-chip.is-canonical {
+      outline: 2px solid #ffffff;
+      outline-offset: 1px;
+    }
+
+    .scale-swatch {
+      height: 62px;
+      width: 100%;
+    }
+
+    .scale-meta {
+      padding: 0.45rem 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+    }
+
+    .scale-meta strong {
+      display: block;
+      font-size: 0.75rem;
+    }
+
+    .scale-meta span {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.25rem;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      padding: 1.25rem;
+    }
+
+    .contrast-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .preset-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.35rem 0.65rem;
+      border-radius: 0.45rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .preset-btn:hover {
+      border-color: var(--color-iammenasco-blue);
+    }
+
+    .hex-input-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.45rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .hex-input-wrap input[type="color"] {
+      width: 24px;
+      height: 24px;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .hex-input-wrap input[type="text"] {
+      width: 5.5rem;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .preview-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .preview-box {
+      border-radius: 0.65rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .preview-box .big {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .preview-box .small {
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .wcag-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .badge {
+      padding: 0.3rem 0.6rem;
+      border-radius: 0.4rem;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+
+    .badge.pass {
+      border-color: rgba(74, 222, 128, 0.45);
+      color: #86efac;
+    }
+
+    .badge.fail {
+      border-color: rgba(248, 113, 113, 0.45);
+      color: #fca5a5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    th, td {
+      padding: 0.55rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    td code {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .certificate {
+      position: relative;
+      background: linear-gradient(160deg, #101c2d 0%, #0a121d 100%);
+      border: 2px solid rgba(54, 141, 218, 0.65);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      box-shadow: inset 0 0 0 6px rgba(54, 141, 218, 0.1);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .cert-kicker {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #81bbf4;
+    }
+
+    .cert-title {
+      margin: 0.35rem 0 0.6rem;
+      font-size: 1.45rem;
+    }
+
+    .cert-body {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0;
+      max-width: 62ch;
+    }
+
+    .cert-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.1rem;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+    }
+
+    .cert-meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .haiku-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .haiku-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.15rem;
+      font-family: var(--mono);
+      font-size: 0.86rem;
+    }
+
+    .haiku-card p {
+      margin: 0;
+      white-space: pre-line;
+    }
+
+    .haiku-card footer {
+      margin-top: 0.65rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    pre {
+      margin: 0;
+      padding: 0.95rem 1rem;
+      background: #070b12;
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      overflow-x: auto;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: #d4e9fe;
+    }
+
+    .toast {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      background: #061e34;
+      color: #ffffff;
+      border: 1px solid #58a2e9;
+      padding: 0.65rem 1rem;
+      border-radius: 0.55rem;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .two-col,
+      .certificate {
+        grid-template-columns: 1fr;
+      }
+
+      .scale-strip {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .preview-pair {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Canonical Color Standard &middot; #368dda</div>
+      <div class="hero-grid">
+        <div>
+          <h1>iammenasco-blue</h1>
+          <p class="hero-sub">
+            An aggressively over-engineered design system, multi-ecosystem package, and open-source flag-planting exercise for one specific shade of blue.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-copy="#368dda">Copy #368dda</button>
+            <a class="btn" href="swatches/iammenasco-blue.ase" download>Download .ase (Adobe)</a>
+            <a class="btn" href="swatches/iammenasco-blue.gpl" download>Download .gpl (GIMP/Inkscape)</a>
+            <a class="btn" href="tokens.json" download>W3C tokens.json</a>
+            <a class="btn" href="https://github.com/iammenasco/iammenasco-blue">GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Canonical specimen summary">
+          <div class="swatch-preview">
+            <span>--color-iammenasco-blue</span>
+            <span>#368dda</span>
+          </div>
+          <div class="kv-mini">
+            <div><span>sRGB</span>54, 141, 218</div>
+            <div><span>HSL</span>208.17&deg; 68.91% 53.33%</div>
+            <div><span>OKLCH</span>62.80% 0.1424 248.95</div>
+            <div><span>CMYK</span>75% 35% 0% 15%</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="tokens-heading">
+      <div class="section-head">
+        <h2 id="tokens-heading">One-Click Token &amp; Package Snippets</h2>
+        <span class="section-note">Click any card to copy</span>
+      </div>
+      <div class="copy-grid" id="copy-grid"></div>
+    </section>
+
+    <section aria-labelledby="scale-heading">
+      <div class="section-head">
+        <h2 id="scale-heading">OKLCH Tonal Scale (50&ndash;950)</h2>
+        <span class="section-note">Anchored on #368dda at stop 500 &middot; constant hue 248.95&deg;</span>
+      </div>
+      <div class="scale-strip" id="scale-strip"></div>
+    </section>
+
+    <section class="two-col" aria-label="Accessibility and color spaces">
+      <div class="panel">
+        <div class="section-head">
+          <h2>Live WCAG 2.1 Contrast Checker</h2>
+          <span class="section-note" id="contrast-ratio-label">Ratio: 3.51:1</span>
+        </div>
+        <div class="contrast-controls">
+          <div class="hex-input-wrap">
+            <input type="color" id="bg-picker" value="#ffffff" aria-label="Comparison color picker">
+            <input type="text" id="bg-hex" value="#ffffff" maxlength="7" aria-label="Comparison hex code">
+          </div>
+          <button class="preset-btn" type="button" data-hex="#ffffff">White</button>
+          <button class="preset-btn" type="button" data-hex="#000000">Black</button>
+          <button class="preset-btn" type="button" data-hex="#0d1117">GitHub Dark</button>
+          <button class="preset-btn" type="button" data-hex="#111827">Gray 900</button>
+          <button class="preset-btn" type="button" data-hex="#061e34">Blue 950</button>
+        </div>
+        <div class="preview-pair">
+          <div class="preview-box" id="preview-fg">
+            <div class="big">iammenasco-blue text</div>
+            <div class="small">14px body sample on selected background</div>
+          </div>
+          <div class="preview-box" id="preview-bg">
+            <div class="big">Selected text</div>
+            <div class="small">14px body sample on #368dda</div>
+          </div>
+        </div>
+        <div class="wcag-badges" id="wcag-badges"></div>
+      </div>
+
+      <div class="panel">
+        <div class="section-head">
+          <h2>Exact Color Space Reference</h2>
+          <span class="section-note">Relative luminance: 0.24896</span>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Space</th><th>Exact Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hex</td><td><code>#368dda</code></td></tr>
+            <tr><td>sRGB (8-bit)</td><td><code>rgb(54, 141, 218)</code></td></tr>
+            <tr><td>HSL</td><td><code>hsl(208.17deg 68.91% 53.33%)</code></td></tr>
+            <tr><td>HSV / HSB</td><td><code>hsv(208.17deg 75.23% 85.49%)</code></td></tr>
+            <tr><td>CMYK</td><td><code>cmyk(75.23%, 35.32%, 0%, 14.51%)</code></td></tr>
+            <tr><td>CIE XYZ (D65)</td><td><code>23.70, 24.89, 69.87</code></td></tr>
+            <tr><td>CIE Lab (D65)</td><td><code>56.97, 0.16, -46.70</code></td></tr>
+            <tr><td>OKLab</td><td><code>oklab(0.6280 -0.0511 -0.1329)</code></td></tr>
+            <tr><td>OKLCH</td><td><code>oklch(62.80% 0.1424 248.95)</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="cdn-heading">
+      <div class="section-head">
+        <h2 id="cdn-heading">Zero-Config CDN &amp; Ecosystem Imports</h2>
+        <span class="section-note">Drop into HTML, CSS, JS/TS, Tailwind, or Python</span>
+      </div>
+      <pre>/* Canonical CSS via jsDelivr */
+@import url("https://cdn.jsdelivr.net/gh/iammenasco/iammenasco-blue@master/css/iammenasco-blue.min.css");
+
+/* JavaScript / TypeScript */
+import blue, { HEX, OKLCH_STRING, SCALE } from 'iammenasco-blue';
+
+/* Tailwind CSS preset */
+presets: [require('iammenasco-blue/tailwind')]
+
+/* Python */
+from iammenasco_blue import HEX, colorize</pre>
+    </section>
+
+    <section aria-labelledby="cert-heading">
+      <div class="certificate">
+        <div>
+          <div class="cert-kicker">Unilateral Open-Source Color Registry</div>
+          <h2 id="cert-heading" class="cert-title">Certificate of Color Squatting</h2>
+          <p class="cert-body">
+            This document attests that hex code <code>#368dda</code> has been enthusiastically claimed across CSS custom properties, npm, PyPI boilerplate, W3C Design Tokens, Adobe Swatch Exchange, and GIMP palettes as <strong>iammenasco-blue</strong>, in affectionate homage to <code>rebeccapurple</code> and stubborn side-project branding.
+          </p>
+          <div class="cert-meta">
+            <div><span>Designation</span>iammenasco-blue</div>
+            <div><span>Hex Identifier</span>#368dda</div>
+            <div><span>Steward</span>@iammenasco</div>
+            <div><span>Authority</span>Pure Audacity (MIT)</div>
+          </div>
+        </div>
+        <svg width="112" height="112" viewBox="0 0 112 112" role="img" aria-label="Official iammenasco-blue seal">
+          <circle cx="56" cy="56" r="50" fill="#368dda" fill-opacity="0.16" stroke="#368dda" stroke-width="2.5" stroke-dasharray="5 3"/>
+          <circle cx="56" cy="56" r="39" fill="#061e34" stroke="#81bbf4" stroke-width="1.5"/>
+          <text x="56" y="51" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="11" font-weight="700">#368DDA</text>
+          <text x="56" y="66" text-anchor="middle" fill="#81bbf4" font-family="monospace" font-size="7.5" letter-spacing="1">CANONICAL</text>
+        </svg>
+      </div>
+    </section>
+
+    <section aria-labelledby="haiku-heading">
+      <div class="section-head">
+        <h2 id="haiku-heading">Archival Haikus</h2>
+        <span class="section-note">Preserved from <a href="haiku.md">haiku.md</a></span>
+      </div>
+      <div class="haiku-grid">
+        <article class="haiku-card">
+          <p>I watch you open
+your strong menasco wingspan
+and fly blue bird fly</p>
+          <footer>&mdash; <a href="https://github.com/run-time">@run-time</a></footer>
+        </article>
+        <article class="haiku-card">
+          <p>cerulean sky
+you're the blue which completes me
+i-am-menasco</p>
+          <footer>&mdash; <a href="https://github.com/run-time">@run-time</a></footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      const BLUE_HEX = '#368dda';
+      const BLUE_LUM = 0.24896;
+
+      const SNIPPETS = [
+        { label: 'Hex', value: '#368dda' },
+        { label: 'CSS Variable', value: 'var(--color-iammenasco-blue)' },
+        { label: 'RGB', value: 'rgb(54, 141, 218)' },
+        { label: 'HSL', value: 'hsl(208.17deg 68.91% 53.33%)' },
+        { label: 'OKLCH', value: 'oklch(62.80% 0.1424 248.95)' },
+        { label: 'CMYK', value: 'cmyk(75%, 35%, 0%, 15%)' },
+        { label: 'jsDelivr @import', value: '@import url("https://cdn.jsdelivr.net/gh/iammenasco/iammenasco-blue@master/css/iammenasco-blue.min.css");' },
+        { label: 'npm install', value: 'npm install iammenasco-blue' },
+        { label: 'pip install', value: 'pip install iammenasco-blue' }
+      ];
+
+      const SCALE = [
+        ['50', '#ebf5ff'],
+        ['100', '#d4e9fe'],
+        ['200', '#add4fb'],
+        ['300', '#81bbf4'],
+        ['400', '#58a2e9'],
+        ['500', '#368dda'],
+        ['600', '#1b74bc'],
+        ['700', '#0a5b98'],
+        ['800', '#094474'],
+        ['900', '#0b3254'],
+        ['950', '#061e34']
+      ];
+
+      const toastEl = document.getElementById('toast');
+      let toastTimer;
+
+      function showToast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toastEl.classList.remove('show'), 1700);
+      }
+
+      async function copyText(text) {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+          }
+          showToast('Copied: ' + text);
+        } catch (err) {
+          showToast('Copy failed — select manually');
+        }
+      }
+
+      const copyGrid = document.getElementById('copy-grid');
+      SNIPPETS.forEach((item) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-card';
+        btn.innerHTML =
+          '<div class="copy-label"><span>' + item.label + '</span><span class="copy-hint">copy</span></div>' +
+          '<div class="copy-value"></div>';
+        btn.querySelector('.copy-value').textContent = item.value;
+        btn.addEventListener('click', () => copyText(item.value));
+        copyGrid.appendChild(btn);
+      });
+
+      const scaleStrip = document.getElementById('scale-strip');
+      SCALE.forEach(([stop, hex]) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'scale-chip' + (stop === '500' ? ' is-canonical' : '');
+        btn.innerHTML =
+          '<div class="scale-swatch" style="background:' + hex + '"></div>' +
+          '<div class="scale-meta"><strong>' + stop + '</strong><span>' + hex + '</span></div>';
+        btn.addEventListener('click', () => copyText(hex));
+        scaleStrip.appendChild(btn);
+      });
+
+      document.querySelectorAll('[data-copy]').forEach((el) => {
+        el.addEventListener('click', () => copyText(el.getAttribute('data-copy')));
+      });
+
+      function toLinear(c) {
+        const u = c / 255;
+        return u <= 0.04045 ? u / 12.92 : Math.pow((u + 0.055) / 1.055, 2.4);
+      }
+
+      function luminance(hex) {
+        const clean = hex.replace('#', '');
+        const r = parseInt(clean.slice(0, 2), 16);
+        const g = parseInt(clean.slice(2, 4), 16);
+        const b = parseInt(clean.slice(4, 6), 16);
+        return 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b);
+      }
+
+      const bgPicker = document.getElementById('bg-picker');
+      const bgHexInput = document.getElementById('bg-hex');
+      const previewFg = document.getElementById('preview-fg');
+      const previewBg = document.getElementById('preview-bg');
+      const ratioLabel = document.getElementById('contrast-ratio-label');
+      const wcagBadges = document.getElementById('wcag-badges');
+
+      function updateContrast(hex) {
+        if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return;
+        const normalized = hex.toLowerCase();
+        bgPicker.value = normalized;
+        bgHexInput.value = normalized;
+
+        const lum = luminance(normalized);
+        const ratio = (Math.max(BLUE_LUM, lum) + 0.05) / (Math.min(BLUE_LUM, lum) + 0.05);
+        ratioLabel.textContent = 'Ratio: ' + ratio.toFixed(2) + ':1';
+
+        previewFg.style.background = normalized;
+        previewFg.style.color = BLUE_HEX;
+
+        previewBg.style.background = BLUE_HEX;
+        previewBg.style.color = normalized;
+
+        const checks = [
+          ['AA Large (>=3.0)', ratio >= 3.0],
+          ['AA Normal (>=4.5)', ratio >= 4.5],
+          ['AAA Large (>=4.5)', ratio >= 4.5],
+          ['AAA Normal (>=7.0)', ratio >= 7.0]
+        ];
+        wcagBadges.innerHTML = checks
+          .map(([label, ok]) => '<span class="badge ' + (ok ? 'pass' : 'fail') + '">' + (ok ? 'PASS ' : 'FAIL ') + label + '</span>')
+          .join('');
+      }
+
+      bgPicker.addEventListener('input', (e) => updateContrast(e.target.value));
+      bgHexInput.addEventListener('input', (e) => {
+        const val = e.target.value.startsWith('#') ? e.target.value : '#' + e.target.value;
+        if (/^#[0-9a-fA-F]{6}$/.test(val)) updateContrast(val);
+      });
+      document.querySelectorAll('.preset-btn').forEach((btn) => {
+        btn.addEventListener('click', () => updateContrast(btn.getAttribute('data-hex')));
+      });
+
+      updateContrast('#ffffff');
+    })();
+  </script>
 </body>
 </html>
