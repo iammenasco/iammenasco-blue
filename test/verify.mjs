@@ -104,3 +104,10 @@ test('OpenGraph image, favicon, and index.html meta tags exist', () => {
   assert.ok(html.includes('href="favicon.svg"'));
   assert.ok(html.includes('https://iammenasco.github.io/iammenasco-blue/og-image.png'));
 });
+
+test('package.json and pyproject.toml versions stay aligned', () => {
+  const pyproject = fs.readFileSync(path.join(root, 'pyproject.toml'), 'utf8');
+  const match = pyproject.match(/^version\s*=\s*"([^"]+)"/m);
+  assert.ok(match, 'version not found in pyproject.toml');
+  assert.equal(match[1], pkg.version);
+});
