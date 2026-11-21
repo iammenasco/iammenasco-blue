@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
@@ -83,4 +84,23 @@ test('package.json entry points exist on disk', () => {
       }
     }
   }
+});
+
+test('Node CLI prints hex, css, json, and ANSI swatch', () => {
+  const cli = path.join(root, pkg.bin['iammenasco-blue']);
+  assert.equal(execFileSync('node', [cli, '--hex'], { encoding: 'utf8' }).trim(), '#368dda');
+  assert.equal(execFileSync('node', [cli, '--css'], { encoding: 'utf8' }).trim(), 'var(--color-iammenasco-blue)');
+  const parsed = JSON.parse(execFileSync('node', [cli, '--json'], { encoding: 'utf8' }));
+  assert.equal(parsed.hex, '#368dda');
+  const swatch = execFileSync('node', [cli], { encoding: 'utf8' });
+  assert.ok(swatch.includes('iammenasco-blue'));
+  assert.ok(swatch.includes('#368dda'));
+});
+
+test('OpenGraph image, favicon, and index.html meta tags exist', () => {
+  assert.ok(fs.existsSync(path.join(root, 'favicon.svg')));
+  assert.ok(fs.existsSync(path.join(root, 'og-image.png')));
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert.ok(html.includes('href="favicon.svg"'));
+  assert.ok(html.includes('https://iammenasco.github.io/iammenasco-blue/og-image.png'));
 });
