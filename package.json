@@ -33,7 +33,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "stylelint \"**/iammenasco-blue.*\"",
+    "test": "node --test test/verify.mjs && python3 -m unittest discover -s test -v",
     "verify": "node --test test/verify.mjs",
     "swatches": "python3 build_swatches.py",
     "prepublishOnly": "npm run verify"
@@ -56,8 +56,5 @@
   "bugs": {
     "url": "https://github.com/iammenasco/iammenasco-blue/issues"
   },
-  "homepage": "https://github.com/iammenasco/iammenasco-blue#readme",
-  "devDependencies": {
-    "stylelint": "*"
-  }
+  "homepage": "https://github.com/iammenasco/iammenasco-blue#readme"
 }
