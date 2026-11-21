@@ -1,1 +1,1 @@
-:root{--color-iammenasco-blue:#368dda}
+:root{--color-iammenasco-blue:#368dda;--iammenasco-blue:#368dda;--iammenasco-blue-rgb:54,141,218;--iammenasco-blue-oklch:oklch(62.80% 0.1424 248.95)}.iammenasco-blue,.text-iammenasco-blue{color:var(--color-iammenasco-blue)}.bg-iammenasco-blue{background-color:var(--color-iammenasco-blue)}.border-iammenasco-blue{border-color:var(--color-iammenasco-blue)}

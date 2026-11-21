@@ -1,12 +1,43 @@
 {
   "name": "iammenasco-blue",
-  "version": "1.0.0",
-  "description": "Adds iammenasco-blue as a varable for your styles!",
-  "main": "css/iammenasco-blue.css",
+  "version": "1.1.0",
+  "description": "Adds iammenasco-blue (#368dda) across CSS, JS/TS, Tailwind, Design Tokens, and Python!",
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "style": "css/iammenasco-blue.css",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./css": "./css/iammenasco-blue.css",
+    "./min.css": "./css/iammenasco-blue.min.css",
+    "./tailwind": "./tailwind.preset.js",
+    "./tokens": "./tokens.json"
+  },
+  "files": [
+    "css/",
+    "less/",
+    "sass/",
+    "stylus/",
+    "swatches/",
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "tailwind.preset.js",
+    "tokens.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "stylelint \"**/iammenasco-blue.*\"",
+    "verify": "node --test test/verify.mjs",
+    "swatches": "python3 build_swatches.py",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublishOnly": "npm run verify && npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -14,8 +45,12 @@
   },
   "keywords": [
     "iammenasco",
+    "iammenasco-blue",
     "#368dda",
-    "blue"
+    "blue",
+    "color",
+    "design-tokens",
+    "tailwind"
   ],
   "author": "Brian Menasco",
   "license": "MIT",
