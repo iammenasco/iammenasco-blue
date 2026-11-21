@@ -1,0 +1,28 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/iammenasco-blue/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Python verification tests
+        run: python3 -m unittest discover -s test -v
+      - name: Build distribution artifacts
+        run: |
+          python3 -m pip install --upgrade build
+          python3 -m build
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

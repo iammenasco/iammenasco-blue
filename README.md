@@ -1,5 +1,6 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
 
+[![CI](https://github.com/iammenasco/iammenasco-blue/actions/workflows/ci.yml/badge.svg)](https://github.com/iammenasco/iammenasco-blue/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/iammenasco-blue?color=368dda)](https://www.npmjs.com/package/iammenasco-blue)
 [![PyPI version](https://img.shields.io/pypi/v/iammenasco-blue?color=368dda)](https://pypi.org/project/iammenasco-blue/)
 [![GitHub release](https://img.shields.io/github/v/release/iammenasco/iammenasco-blue?color=368dda)](https://github.com/iammenasco/iammenasco-blue/releases)
