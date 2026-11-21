@@ -65,10 +65,11 @@ Anchored at `500 = #368dda` with constant OKLCH hue `248.95°`:
 
 Also exposes utility classes `.iammenasco-blue`, `.text-iammenasco-blue`, `.bg-iammenasco-blue`, and `.border-iammenasco-blue`.
 
-### 2. npm / JavaScript / TypeScript
+### 2. npm / JavaScript / TypeScript / CLI
 
 ```sh
 npm install iammenasco-blue
+npx iammenasco-blue
 ```
 
 ```ts
