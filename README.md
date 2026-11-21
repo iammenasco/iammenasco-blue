@@ -1,11 +1,10 @@
 # [iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/)
 
-[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/8js6.svg)](https://betteruptime.com/?utm_source=status_badge)
-[![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/iammenasco-blue/badge.svg)](https://snyk.io/test/github/iammenasco/iammenasco-blue)
-[![npm version](https://badge.fury.io/js/iammenasco-blue.svg)](https://badge.fury.io/js/iammenasco-blue)
-[![Bower version](https://badge.fury.io/bo/iammenasco-blue.svg)](https://badge.fury.io/bo/iammenasco-blue)
+[![npm version](https://img.shields.io/npm/v/iammenasco-blue?color=368dda)](https://www.npmjs.com/package/iammenasco-blue)
+[![GitHub release](https://img.shields.io/github/v/release/iammenasco/iammenasco-blue?color=368dda)](https://github.com/iammenasco/iammenasco-blue/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-368dda)](LICENSE)
 
-> **Canonical Hex:** `#368dda` &middot; **Specimen:** [iammenasco.github.io/iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/) &middot; **Poetry:** [haiku.md](haiku.md)
+> **Canonical Hex:** `#368dda` &middot; **Specimen:** [iammenasco.github.io/iammenasco-blue](https://iammenasco.github.io/iammenasco-blue/) &middot; **Poetry:** [haiku.md](haiku.md) &middot; **Registry:** [colornames.org/color/368dda](https://colornames.org/color/368dda)
 
 `iammenasco-blue` (`#368dda`) is the shade of blue used across Brian Menasco's side projects—now packaged with the completely unnecessary rigor of an enterprise design system.
 
@@ -99,10 +98,10 @@ Provides `bg-iammenasco-blue`, `text-iammenasco-blue`, `iammenasco-blue-50` thro
 
 ### 5. Python & Terminal ANSI
 
-Install directly from git or PyPI (once published):
+Install directly from GitHub:
 
 ```sh
-pip install iammenasco-blue
+pip install "git+https://github.com/iammenasco/iammenasco-blue.git"
 ```
 
 ```python
@@ -120,7 +119,7 @@ python3 -m iammenasco_blue
 
 ### 6. Adobe & GIMP / Inkscape / Krita Swatches
 
-Pre-built swatches live in [`swatches/`](swatches):
+Pre-built swatches live in [`swatches/`](swatches) and on the [Releases page](https://github.com/iammenasco/iammenasco-blue/releases):
 - [`swatches/iammenasco-blue.ase`](swatches/iammenasco-blue.ase) — Adobe Swatch Exchange (Photoshop, Illustrator, InDesign)
 - [`swatches/iammenasco-blue.gpl`](swatches/iammenasco-blue.gpl) — GIMP Palette (GIMP, Inkscape, Krita)
 
@@ -130,13 +129,8 @@ Regenerate from `tokens.json` with:
 python3 build_swatches.py
 ```
 
-### 7. Legacy Preprocessors & Bower
+### 7. Legacy Preprocessors
 
 - **Sass:** `@import "iammenasco-blue/sass/iammenasco-blue.sass";` -> `$color-iammenasco-blue`
 - **Less:** `@import "iammenasco-blue/less/iammenasco-blue.less";` -> `@color-iammenasco-blue`
 - **Stylus:** `@import "iammenasco-blue/stylus/iammenasco-blue.styl"` -> `$color-iammenasco-blue`
-- **Bower:** `bower install iammenasco-blue -S`
-
----
-
-[![NPM](https://nodei.co/npm/iammenasco-blue.png?downloads=true&stars=true)](https://nodei.co/npm/iammenasco-blue/)
