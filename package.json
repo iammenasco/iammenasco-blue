@@ -18,6 +18,10 @@
     },
     "./css": "./css/iammenasco-blue.css",
     "./min.css": "./css/iammenasco-blue.min.css",
+    "./theme.css": "./css/theme.css",
+    "./theme.min.css": "./css/theme.min.css",
+    "./surfaces.css": "./css/surfaces.css",
+    "./surfaces.min.css": "./css/surfaces.min.css",
     "./tailwind": "./tailwind.preset.js",
     "./tokens": "./tokens.json"
   },

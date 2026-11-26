@@ -70,6 +70,41 @@ test('CSS and legacy preprocessor files contain #368dda', () => {
   assert.ok(css.includes('--iammenasco-blue: #368dda;'));
 });
 
+test('theme.css and surfaces.css expose light/dark surface contract and utilities', () => {
+  for (const rel of [
+    'css/theme.css',
+    'css/theme.min.css',
+    'css/surfaces.css',
+    'css/surfaces.min.css',
+  ]) {
+    const content = fs.readFileSync(path.join(root, rel), 'utf8');
+    assert.ok(content.includes('#368dda'), `${rel} missing #368dda`);
+    assert.ok(content.includes('prefers-color-scheme'), `${rel} missing prefers-color-scheme`);
+    assert.ok(content.includes("data-theme='dark'"), `${rel} missing data-theme='dark' override`);
+    for (const token of [
+      '--ib-bg:',
+      '--ib-surface:',
+      '--ib-card:',
+      '--ib-text:',
+      '--ib-muted:',
+      '--ib-border:',
+      '--ib-border-strong:',
+      '--ib-primary:',
+      '--ib-primary-fg:',
+      '--ib-focus-ring:',
+    ]) {
+      assert.ok(content.includes(token), `${rel} missing token ${token}`);
+    }
+  }
+
+  for (const rel of ['css/surfaces.css', 'css/surfaces.min.css']) {
+    const content = fs.readFileSync(path.join(root, rel), 'utf8');
+    for (const selector of ['.ib-card', '.card', '.ib-pill', '.pill', '.ib-badge', '.badge', '.ib-focus-ring']) {
+      assert.ok(content.includes(selector), `${rel} missing utility ${selector}`);
+    }
+  }
+});
+
 test('package.json entry points exist on disk', () => {
   assert.ok(fs.existsSync(path.join(root, pkg.main)));
   assert.ok(fs.existsSync(path.join(root, pkg.module)));
