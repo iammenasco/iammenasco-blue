@@ -66,6 +66,12 @@ Anchored at `500 = #368dda` with constant OKLCH hue `248.95°`:
 
 Also exposes utility classes `.iammenasco-blue`, `.text-iammenasco-blue`, `.bg-iammenasco-blue`, and `.border-iammenasco-blue`.
 
+For an optional zero-JS surface/theme contract (`prefers-color-scheme: light/dark`, `[data-theme]` overrides, `--ib-*` surface/primary/focus/border tokens, and `.card` / `.pill` / `.badge` utilities):
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iammenasco/iammenasco-blue@master/css/surfaces.min.css" />
+```
+
 ### 2. npm / JavaScript / TypeScript / CLI
 
 ```sh
@@ -78,10 +84,12 @@ import blue, { HEX, RGB, OKLCH_STRING, SCALE, ANSI } from 'iammenasco-blue';
 // or CommonJS: const blue = require('iammenasco-blue');
 ```
 
-CSS import from `node_modules`:
+CSS imports from `node_modules`:
 
 ```css
 @import "iammenasco-blue/css";
+@import "iammenasco-blue/theme.css";    /* light/dark tokens only */
+@import "iammenasco-blue/surfaces.css"; /* tokens + .card / .pill / .badge utilities */
 ```
 
 ### 3. Tailwind CSS Preset
